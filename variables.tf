@@ -43,3 +43,9 @@ variable "assume_role_action" {
   default     = "sts:AssumeRole"
   description = "The IAM action to be granted by the AssumeRole policy"
 }
+
+variable "policy_attachments" {
+  type        = list(string)
+  description = "List of Managed policy ARNs to attach to role. (e.g. `list(`arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore`))"
+  default     = []
+}
